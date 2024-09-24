@@ -1,0 +1,40 @@
+.newasIcon {
+    padding-top: 100px;
+
+    padding-left: 50px;
+
+padding-right: 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background-image:
+    linear-gradient(to right, #064d18a3 40%, #9c940285),
+    url('https://imgs.search.brave.com/W4RcETk3nkY_AET1s9PXvGD-WE7OZr4NPiFEgNIO1NI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzIxLzA2Lzk1/LzM2MF9GXzMyMTA2/OTUwMF9qZ2lFNjQw/WUE4REh0Wmp3TVJm/dGNUdG5ZTm83c0h3/Ui5qcGc');
+
+    height: 100vh;
+    
+    }
+    
+    @media  (max-width: 1068px){
+      .newasIcon{
+        padding-left: 20px;
+
+        padding-right: 20px;
+      }
+  
+    }
+
+
+  @media  (max-width: 968px){
+    .newasIcon{
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+  }
+
+
+  

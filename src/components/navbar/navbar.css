@@ -1,0 +1,141 @@
+.nav {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0rem;
+    font-family: "Cairo", sans-serif; 
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+  }
+
+  .sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fadeIn .5s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .nav ul {
+    padding: 0;
+    margin: 0px 10%;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 15px;
+    font-weight: 900;
+    /* width: 100%; */
+    
+  }
+  
+  .nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+  }
+
+  .nav li{
+    margin-top: 22px;
+    width: 11em;
+    height: 3em; 
+    border: none;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .nav li::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+
+  .nav li.active {
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    border-radius: 30em;
+  } 
+  
+  .nav li:hover::before {
+    width: 11em;
+   }
+
+   .bx-menu{
+    display: none;
+   }
+
+
+  @media (max-width: 1300px) {
+    .nav ul{
+      gap: 0rem;
+      font-size: 12px;
+    } 
+  }
+
+  @media (max-width: 1040px) {
+
+    .nav ul{
+     flex-direction: column;
+     background-color: #ffffff;
+     position: absolute;
+     width: 200px;
+     height: 100vh;
+     direction: rtl;
+     unicode-bidi: bidi-override;
+     padding: 50px 20px;
+     top: 60px;
+     right: -505px;
+     z-index: 2;
+     display: none;
+    } 
+
+.nav ul.open{
+  right: -75px;
+  display: block;
+  animation: fadeIn .5s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+    .nav a{
+      color: #000;
+      font-size: 10px;
+      padding:  20px 10px;
+    }
+
+    .bx-menu{
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+      float: right;
+      margin: 30px 20px;
+    }
+
+    .bx-x{
+      position: absolute;
+		  top: 2rem;
+		  right: 2rem;
+    }
+  }
